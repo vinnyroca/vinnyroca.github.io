@@ -3,15 +3,16 @@
 
 body {
 
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(0, 0, 0);
 
-    font-size: 14pt;
+    font-size: 16pt;
   
     font-family: 'EB Garamond', serif;
+    font-weight: bold;
   
-    color: white;
+    color:rgb(255, 255, 255);
   
-    line-height: 14pt;
+    line-height: 16pt;
   
     padding-left: 20pt;
   
@@ -23,14 +24,14 @@ body {
 
   a {
 
-   color: rgb(177, 179, 252);
+   color: rgb(65, 65, 255);
   
   }
   
   
   a:link, a:visited {
   
-    color:rgb(177, 179, 252);
+    color:rgb(65, 65, 255);
   
   }
   
