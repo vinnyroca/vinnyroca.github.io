@@ -1,7 +1,11 @@
 
+
+
 body {
 
-    font-size: 10pt;
+    background-color: rgb(39, 39, 39);
+
+    font-size: 14pt;
   
     font-family: 'EB Garamond', serif;
   
@@ -9,24 +13,24 @@ body {
   
     line-height: 14pt;
   
-    padding-left: 5pt;
+    padding-left: 20pt;
   
-    padding-right: 5pt;
+    padding-right: 30pt;
   
-    padding-top: 5pt;
+    padding-top: 20pt;
     
   }
 
   a {
 
-    text-decoration: white;
+   color: rgb(177, 179, 252);
   
   }
   
   
   a:link, a:visited {
   
-    color:white;
+    color:rgb(177, 179, 252);
   
   }
   
