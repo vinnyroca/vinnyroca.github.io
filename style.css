@@ -19,9 +19,14 @@ body {
     padding-right: 30pt;
   
     padding-top: 20pt;
+
+   
     
   }
 
+  p{
+    margin: 5px;
+  }
   a {
 
    color: rgb(65, 65, 255);
