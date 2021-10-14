@@ -1,0 +1,40 @@
+
+body {
+
+    font-size: 10pt;
+  
+    font-family: 'EB Garamond', serif;
+  
+    color: black;
+  
+    line-height: 14pt;
+  
+    padding-left: 5pt;
+  
+    padding-right: 5pt;
+  
+    padding-top: 5pt;
+    
+  }
+
+  a {
+
+    text-decoration: white;
+  
+  }
+  
+  
+  a:link, a:visited {
+  
+    color:white;
+  
+  }
+  
+  
+  a:hover, a:active {
+  
+    color: white;
+  
+  }
+  
+  
