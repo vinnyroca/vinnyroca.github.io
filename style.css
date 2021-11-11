@@ -55,7 +55,9 @@ body {
 
 img
 {
-display: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 width: 100%;
 height: auto;
 max-width: 600px
@@ -63,7 +65,9 @@ max-width: 600px
 
 video
 {
-display: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 width: 100%;
 height: auto;
 max-width: 600px
@@ -71,7 +75,9 @@ max-width: 600px
 
 iframe
 {
-display: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 width: 100%;
 height: auto;
 max-width: 600px
