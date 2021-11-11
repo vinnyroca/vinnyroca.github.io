@@ -52,5 +52,19 @@ body {
     width: device-width ;
     zoom: 10.0;
   }
+
+img
+{
+display: relative;
+width: 720px;
+height: auto;
+}
+
+video
+{
+display: relative;
+width: 720px;
+height: auto;
+}
   
   
