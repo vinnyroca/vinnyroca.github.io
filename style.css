@@ -56,15 +56,17 @@ body {
 img
 {
 display: relative;
-width: 25%;
+width: 100%;
 height: auto;
+max-width: 600px
 }
 
 video
 {
 display: relative;
-width: 25%;
+width: 100%;
 height: auto;
+max-width: 600px
 }
   
   
