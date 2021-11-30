@@ -49,6 +49,18 @@ line-height: 50pt;
     font-family: 'EB Garamond', serif;
   font-weight: thin;
 }
+h3
+{
+font-size:40px;
+line-height: 30pt;
+color:rgb(248, 234, 107);
+
+
+  
+    
+    font-family: 'EB Garamond', serif;
+  font-weight: thin;
+}
   p{
     margin: 5px;
   }
