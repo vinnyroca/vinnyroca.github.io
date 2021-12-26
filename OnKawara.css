@@ -1,0 +1,39 @@
+html, body					{ margin:0px; padding:0px; border:none; }
+h1, h2, h3					{ margin:0px; padding:0px; font-weight:normal; }
+h4, h5, h6					{ margin:0px; padding:0px; font-weight:normal; }
+p										{ margin:0px; padding:0px; }
+ul, ol, li					{ margin:0px; padding:0px; list-style:none; }
+img									{ border:none; }
+a										{ text-decoration:none; outline:none; color: #000; }
+div									{ position:relative; }
+
+
+
+
+
+
+@font-face {
+	font-family: "Fut";
+	src: url("http://db.onlinewebfonts.com/t/b46bb1fc76216f5cd90457d0451dbee4.woff") format("woff");
+}
+
+body	{
+	
+	background-color: #000;
+}
+
+
+p
+{
+    font:120px Fut;
+	position: fixed; /* or absolute */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	color: #FFF;
+    width: 890px;
+	height: 137px;
+	text-align: center;
+	/*background-color: #0ff;*/
+}
