@@ -14,7 +14,7 @@ div									{ position:relative; }
 
 @font-face {
 	font-family: "Fut";
-	src: url("http://db.onlinewebfonts.com/t/b46bb1fc76216f5cd90457d0451dbee4.woff") format("woff");
+	src: url(FuturaStdBook.otf) format("woff");
 }
 
 body	{
