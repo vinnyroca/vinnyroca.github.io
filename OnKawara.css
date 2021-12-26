@@ -12,10 +12,10 @@ div									{ position:relative; }
 
 
 
-@font-face {
+/* @font-face {
 	font-family: "Fut";
 	src: url(../FuturaStdMedium.woff) format("woof");
-}
+} */
 
 body	{
 	
@@ -25,13 +25,13 @@ body	{
 
 p
 {
-    font:120px Fut;
-	position: fixed; /* or absolute */
+    font:120px Garamond;
+/* or absolute */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: auto;
-	color: #FFF;
+	color: rgb(4, 0, 255);
     width: 890px;
 	height: 137px;
 	text-align: center;
