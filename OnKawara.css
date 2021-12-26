@@ -14,7 +14,7 @@ div									{ position:relative; }
 
 @font-face {
 	font-family: "Fut";
-	src: url(../FuturaStdBook.otf) format("truetype");
+	src: url(../FuturaStdMedium.woff) format("woof");
 }
 
 body	{
