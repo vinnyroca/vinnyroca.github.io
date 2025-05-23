@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <style>
+    /* body{margin:0} */
+    /* iframe {overflow:hidden;} */
+    /* .Button{ font-weight: bold; position:absolute; right:0}
+    .blue { color:blue}
+   
+    .list{ position:absolute; right:0;top:0 } */
+    /* .responsive{
+      width:100%;
+      height:0;
+      padding-bottom:56.25%;
+      position: relative;
+    } */
+    /* .responsive iframe{
+      /* position:absolute;
+      width: 100%;
+      height: 100%;
+    }  */
+    body{ font-family: 'EB Garamond'; color: #ffffff; background: #000000;}
+    .Button
+    {
+      font-family: 'EB Garamond';
+      height: 30px;
+      line-height: 15px;
+      border-radius: 0%;
+      background: #000000;
+      color: #ffffff;
+      border: 0px solid #000000;
+      font-size:30px;
+      border-radius: 5%;
+      filter: blur(1px);
+      
+    }
+    .Button:hover
+    {
+      /* filter: blur(1px); */
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+    .container
+    {
+      align-items: center;
+      justify-content: center;
+      
+      display:flex;
+      flex-direction: row; 
+      padding-top: 20px;
+      
+      
+      
+
+     
+      
+    }
+    .Box
+    {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: row; 
+      /* gap: 10px; */
+      /* padding-top: 10px; */
+      
+
+    }
+    .chat-header
+    {
+      vertical-align: middle;
+      height: 30px;
+      line-height: 30px;
+      /* background: #212121;
+       */
+      
+      /* border: 1px solid #333;  */
+      
+      
+    }
+   .chatBox
+   {
+    
+    /* border: 1px solid #181818; */
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    display: flex;
+    flex-direction:column;
+   
+   }
+    .chat-log {
+      filter: blur(1px);
+      /* background: #3c3c3c;  */
+      /* border: 1px solid #ffffff; */
+      width:400px; 
+      padding-top: 10px;
+      padding-left: 20px;
+      height: 590px;
+      overflow-y: auto;
+      white-space: wrap;
+      position: relative ; top:0;
+      scrollbar-color: rgba(27, 27, 27, 0.53) rgb(0, 0, 0);
+      scrollbar-width:thin;
+
+    }
+    .message {
+      margin-bottom: 8px;
+    }
+    .Header
+    {
+      filter: blur(1px);
+      /* border: 1px solid #181818; */
+      vertical-align: middle;
+      /* background: #3a3a3a;  */
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+      height: 40 px;
+      width: 1210px; 
+      gap: 10px;
+      font-size: 20px;
+      line-height: 40px;
+      padding-bottom: 10px;
+    }
+    .header-box
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+    }
+    .button-row
+    {
+      
+      filter: blur(1px);
+      /* border: 1px solid #181818; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 1210px;
+      /* background: #333;  */
+      gap: 10px;
+      height: 30px;
+    }
+    .c{
+      
+      
+      display: flex;
+  justify-content: center;
+  align-items: center;
+      display: block;
+     margin: auto;
+    }
+    
+
+  </style>
+  <!-- <script  src ="unityBuild/Build/unityBuild.loader.js"></script> -->
+  <!-- <script  src ="unityBuild/index.html"></script> -->
+  <script defer src="app.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+  <div class = c>
+  <div class = "header-box"> 
+  <div class = "Header" id = "header">
+    <div id = "innoc"></div>
+    <div style="filter: blur(2px);">LOVE IS EVERYWHERE</div>
+    <div id = "gifts"  >GIFTS:0</div>
+    
+   
+   </div>
+  </div>
+   <div class = "Box">
+    
+    <iframe id="unity-frame" width="800" height="600" src="/unityBuild/index.html" frameborder="0"scrolling="no" style="filter: blur(3px);border-radius: 2%; "> </iframe>
+    <div class = "chatBox">
+      <!-- <div  class ="chat-header"> L.I.E LOG <div id="chat-header" style="text-align: center;"></div>  </div> -->
+      <div class="chat-log" id="chatLog">
+        <div class="message">
+          <span class="timestamp">WELCOME</span>
+        </div>
+      </div>
+    
+    </div>
+    
+  </div>
+
+      <div id = "main-content" class ="container">
+        
+        <div class = "button-row" style="background: #000000;">
+        <!-- <button   id="callUnity" class = "Button">UNITY</button> -->
+          <div style="width: 800px; background-color: rgb(0, 0, 0);display: flex;
+            align-items: center;
+            justify-content: space-between;" >
+            <div style="width: 200px; background-color: rgb(0, 0, 0); height: 30px; display:flex; align-items:  center; justify-content: start;">
+              <button   id="left" class = "Button">←</button>
+            <button hidden id = "sendButton" class=" Button blue bottomLeft">SEND</button>
+            
+          
+            </div>
+            
+            <div style="width: 200px; background-color: rgb(0, 0, 0); height: 30px;display: flex; align-items: center; justify-content: center;">
+              <button   hidden id="feedButton" class ="Button" >FEED</button>
+            </div>
+            
+            <div style="width: 200px; background-color: rgb(0, 0, 0); height: 30px; display: flex; align-items: center; justify-content: end;">
+              <button   id="right" class = "Button">→</button>
+              </div>
+          
+            
+          <!-- <input type="text" id="username-input" name="username" maxlength="3" placeholder="WHO ARE YOU?" style="text-align: center; font-family: monospace;height: 20px; "> -->
+          <!-- <button id = "username-button" class = "Button">CONFIRM</button> -->
+          </div>
+          <!-- <input class = "input" id = "inputText">
+          <button id = "sendButton2">send</button> -->
+          <div class = "Timer" id = "time" style="font-size: 20px;
+      line-height: 40px;"></div>
+        </div>
+       
+    
+       
+        
+
+      </div>
+    </div>
+   
+ <div  id= "hungry" style="position: absolute; bottom: 10px; right: 10px;">xxx</div>
+ <div  id= "hasAccepted" style="position: absolute; bottom: 10px; right: 100px;">yyy</div>
+ <div  id= "eating" style="position: absolute; bottom: 10px; right: 300px;">zzz</div>
+ 
+    
+
+
+  
+
+  
+    <!-- Chat messages appear here -->
+  <!-- </div>
+
+  <button id="feedButton">Feed Animal</button> -->
+
+  
+</body>
+</html>
